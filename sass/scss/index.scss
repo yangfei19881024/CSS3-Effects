@@ -11,3 +11,109 @@ $panelWidth:120px !default;
 .panel.active{
     @include translate3d(0, 0, 0);
 }
+
+%triangle-basic{
+    content:"";
+    width:0;
+    height: 0;
+    overflow: hidden;
+}
+
+@mixin triangle($direction,$size:6px,$bordercolor:gray){
+    @extend %triangle-basic;
+
+    @if $direction == top{
+        border-bottom:$size solid $bordercolor;
+        border-left:$size dashed transparent;
+        border-right:$size dashed transparent;
+    }
+    @else if $direction == bottom{
+        border-top:$size solid $bordercolor;
+        border-left:$size dashed transparent;
+        border-right:$size dashed transparent;
+    }
+    @else if $direction == left{
+        border-right:$size solid $bordercolor;
+        border-top:$size dashed transparent;
+        border-bottom:$size dashed transparent;
+    }
+    @else if $direction == right{
+        border-left:$size solid $bordercolor;
+        border-top:$size dashed transparent;
+        border-bottom:$size dashed transparent;
+    }
+}
+
+@mixin prefixers($property,$value,$prefixs:o webkit ms){
+
+    @each $prefix in $prefixs{
+        -#{$prefix}-#{$property}:$value;
+    }
+
+    #{$property}:$value;
+}
+
+@mixin rotate($deg){
+    @include prefixers(transform,rotate($deg));
+}
+
+@mixin arrow($direction,$width,$height,$bordercolor){
+    display: inline-block;
+    vertical-align:top;
+    width:$width;
+    height:$height;
+    @if $direction == top{
+        border-top:1px solid $bordercolor;
+        border-right:1px solid $bordercolor;
+        @include rotate(-45deg);
+    }
+
+    @else if $direction == bottom{
+        border-right:1px solid $bordercolor;
+        border-bottom:1px solid $bordercolor;
+        @include rotate(45deg);
+    }
+
+    @else if $direction == left{
+        border-left:1px solid $bordercolor;
+        border-bottom:1px solid $bordercolor;
+        @include rotate(45deg);
+    }
+
+    @else if $direction == right{
+        border-right:1px solid $bordercolor;
+        border-top:1px solid $bordercolor;
+        @include rotate(45deg);
+    }
+}
+
+%transform-transition{
+    -webkit-transition:-webkit-transform .3s ease-in-out;
+    transition:transform .3s ease-in-out;
+}
+
+@mixin horizontal-line($border: 1px dashed red, $padding: 10px) {
+    border-bottom: $border;
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+%horizontal-line {
+    @include horizontal-line;
+}
+
+nav{
+
+    @include arrow(bottom,10px,10px,#333);
+
+    @extend %transform-transition;
+
+
+    &:hover{
+        @include rotate(225deg);
+    }
+}
+
+.box{
+    @include horizontal-line;
+}

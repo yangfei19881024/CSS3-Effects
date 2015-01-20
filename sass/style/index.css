@@ -1,6 +1,5 @@
 .panel {
   -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
@@ -12,6 +11,36 @@
 .panel.active {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
+}
+
+nav {
+  -webkit-transition: -webkit-transform .3s ease-in-out;
+  transition: transform .3s ease-in-out;
+}
+
+nav {
+  display: inline-block;
+  vertical-align: top;
+  width: 10px;
+  height: 10px;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+nav:hover {
+  -o-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.box {
+  border-bottom: 1px dashed red;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */
