@@ -1,5 +1,5 @@
-1. ²à±ßÀ¸ÊÇ·ÅÔÚbody ÀïÃæµÄ£¬È»ºóÒÆ¶¯ÊÇ body ÔÚÏòÓÒ±ßÒÆ¶¯
-2. µ±²à±ßÀ¸³öÏÖµÄÊ±ºò £¬bodyÊÇ²»¿ÉÒÔ¹ö¶¯µÄ£¬ÓÃµ½µÄ¼¼ÊõÊÇ:
+1. ä¾§è¾¹æ æ˜¯æ”¾åœ¨body é‡Œé¢çš„ï¼Œç„¶åŽç§»åŠ¨æ˜¯ body åœ¨å‘å³è¾¹ç§»åŠ¨
+2. å½“ä¾§è¾¹æ å‡ºçŽ°çš„æ—¶å€™ ï¼Œbodyæ˜¯ä¸å¯ä»¥æ»šåŠ¨çš„ï¼Œç”¨åˆ°çš„æŠ€æœ¯:
 
  function spreventDefault(e){
         e.preventDefault();
