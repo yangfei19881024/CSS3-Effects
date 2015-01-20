@@ -1,0 +1,213 @@
+<html><head>
+  <meta charset="UTF-8">
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2015 by marvin1023 (http://jsbin.com/sapip/2/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="format-detection" content="telphone=no">
+  <title>panel</title>
+  <link rel="stylesheet" href="../libs/reset.css" media="all">
+  <script src="../libs/zepto.js"></script>
+
+<style id="jsbin-css">
+.header,.footer,.wrap-page{
+  position:absolute;
+  left:0;
+  right:0;
+}
+.header,.footer{
+  height:44px;
+  background-color: #fff;
+  text-align: center;
+  z-index:900;
+  line-height:44px;
+}
+.header{
+  top: 0;
+  border-bottom: 1px solid #f00;
+}
+.footer{
+  bottom: 0;
+  border-top: 1px solid #f00;
+}
+.page-title{
+  line-height:44px;
+}
+.fl{
+  float:left;
+}
+.fr{
+  float: right;
+}
+.btn-list{
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-list:before{
+  content:"";
+  width:20px;
+  height: 2px;
+  background-color: #ccc;
+  display:inline-block;
+  box-shadow: 0 7px 0 #ccc, 0 -7px 0 #ccc;
+}
+.wrap-page{
+  top: 44px;
+  bottom: 44px;
+  overflow-y:auto;
+  -webkit-overflow-scrolling: touch;
+}
+.page{
+	position: relative;
+	padding: 10px;
+}
+.page p{
+	margin-bottom: 10px;
+}
+/* panel */
+.panel{
+  position: absolute;
+  z-index: 1000;
+  width:120px;
+  top:-1px;
+  bottom:-1px;
+  left:0;
+  background:#333;
+  transform:translate3d(-120px,0,0);
+  transform:-webkit-translate3d(-120px,0,0);
+}
+
+.nav-aside{
+  position: absolute;
+  width:120px;
+}
+
+body.has-panel {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+body.panel-active{
+  -webkit-transform: translate3d(120px, 0, 0);
+  transform: translate3d(120px, 0, 0);  
+  overflow-x:hidden;
+}
+
+.nav-aside {
+  line-height: 40px;
+}
+.nav-aside li {
+  border-bottom: 1px solid #222;
+  color: #fff;
+}
+.nav-aside li a {
+  color: #fff;
+  padding: 0 5px;
+  display: block;
+}
+.nav-aside li a:hover, .nav-aside li a:active, .nav-aside li a.active {
+  background-color: #404040;
+}
+
+
+
+</style>
+</head>
+<body class="has-panel">
+	<header id="header" class="header">
+      <span id="panelSwitch" class="btn-list fl"></span>
+      <h1 class="page-title">panel测试</h1>
+	</header>
+	<div id="main" class="wrap-page">
+		<section class="page" id="wrap"><div class="page-inner">
+		    <p>君子曰：学不可以已。</p>
+			<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+			<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+			<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+			<p>君子曰：学不可以已。</p>
+			<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+			<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+			<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+			<p>君子曰：学不可以已。</p>
+			<p>青，取之于蓝，而青于蓝；冰，水为之，而寒于水。木直中绳，輮以为轮，其曲中规。虽有槁暴（pù），不复挺者，輮使之然也。故木受绳则直，金就砺则利，君子博学而日参省乎己，则知明而行无过矣。</p>
+			<p>故不登高山，不知天之高也；不临深溪，不知地之厚也；不闻先王之遗言，不知学问之大也。干、越、夷、貉之子，生而同声，长而异俗，教使之然也。诗曰：“嗟尔君子，无恒安息。靖共尔位，好是正直。神之听之，介尔景福。”神莫大于化道，福莫长于无祸。</p>
+			<p>吾尝终日而思矣，不如须臾之所学也；吾尝跂而望矣，不如登高之博见也。登高而招，臂非加长也，而见者远；顺风而呼，声非加疾也，而闻者彰。假舆马者，非利足也，而致千里；假舟楫者，非能水也，而绝江河。君子生非异也，善假于物也。</p>
+		</div></section>
+	</div>
+	<footer class="footer">footer</footer>
+
+	<section class="panel" id="panelNav">
+		<ul class="nav-aside">
+			<li><a href="#">Home</a></li>
+			<li><a href="#">List</a></li>
+			<li><a href="#">Demo</a></li>
+			<li><a href="#">Download</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">List</a></li>
+      <li><a href="#">Demo</a></li>
+      <li><a href="#">Download</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">List</a></li>
+      <li><a href="#">Demo</a></li>
+      <li><a href="#">Download</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">List</a></li>
+      <li><a href="#">Demo</a></li>
+      <li><a href="#">Download</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">List</a></li>
+      <li><a href="#">Demo</a></li>
+      <li><a href="#">Download</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">List</a></li>
+      <li><a href="#">Demo</a></li>
+      <li><a href="#">Download</a></li>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">List</a></li>
+      <li><a href="#">Demo</a></li>
+      <li><a href="#">Download</a></li>
+		</ul>
+	</section>  
+
+<script src="../libs/iscroll.js"></script>
+
+<script>
+$(function(){
+
+    var myScroll = new IScroll('#panelNav');
+
+    $("#panelSwitch").tap(function(){
+     
+       var $body = $("body");
+
+       function spreventDefault(e){
+        e.preventDefault();
+       }
+
+       if( $body.hasClass('panel-active') ){
+
+          $body.removeClass('panel-active');
+
+          $body.off('touchmove',spreventDefault);
+
+       }else{
+
+          $body.addClass('panel-active');
+          $body.on('touchmove',spreventDefault);
+
+       }
+
+    });
+
+});
+</script>
+</html>
