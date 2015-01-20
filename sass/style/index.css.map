@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAmQA,MAAsB;EATd,kBAAkB,EAAE,4DAA4D;EAChF,UAAU,EAAE,oDAAoD;;;ACtPxE,MAAM;EC8BM,iBAAoB,EAAE,yBAAM;EAahC,SAAY,EAAE,yBAAM;;;ADtC5B,aAAa;ECyBD,iBAAoB,EAAE,oBAAM;EAahC,SAAY,EAAE,oBAAM",
+"sources": ["../../sandal/core/_mixin.scss","../scss/index.scss","../../sandal/core/_css3.scss"],
+"names": [],
+"file": "index.css"
+}

@@ -1,0 +1,17 @@
+.panel {
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.panel {
+  -webkit-transform: translate3d(-120px, 0, 0);
+  transform: translate3d(-120px, 0, 0);
+}
+
+.panel.active {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/*# sourceMappingURL=index.css.map */

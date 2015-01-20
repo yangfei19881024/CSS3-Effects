@@ -1,0 +1,13 @@
+@import '../../sandal/_function.scss';
+
+
+$panelWidth:120px !default;
+
+.panel{
+    
+    @include translate3d(-$panelWidth, 0, 0);
+    @extend %transition-transform;
+}
+.panel.active{
+    @include translate3d(0, 0, 0);
+}
