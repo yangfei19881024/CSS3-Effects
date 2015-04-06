@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>钟摆</title>
+	<style>
+		.box{
+			width:120px;
+		  	height:auto;
+		  	margin:0 auto;
+			transform-origin:center top;
+			transform:rotate(-30deg);
+			-webkit-transform:rotate(-30deg);
+
+			animation:roll 2.2s ease-in-out alternate;
+			-webkit-animation:roll 2.2s ease-in-out infinite alternate;
+		}
+
+		@keyframes roll{
+			to{
+				transform:rotate(30deg);
+			}
+		}
+		@-webkit-keyframes roll{
+			to{
+				-webkit-transform:rotate(30deg);
+			}
+		}
+		.watch{
+		  width:100%;
+		  height:auto;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="pic.png" class="watch" alt="">
+	</div>
+</body>
+</html>
