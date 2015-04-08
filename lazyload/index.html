@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+			background: url(loading.jpg) no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<ul>
+		<li><img class="lazy" width="640" height="200" data-original="http://a.hiphotos.baidu.com/image/pic/item/d8f9d72a6059252d0ca25f05369b033b5bb5b97e.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://h.hiphotos.baidu.com/image/pic/item/838ba61ea8d3fd1f1641ce99334e251f94ca5fcc.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://g.hiphotos.baidu.com/image/pic/item/960a304e251f95cae769d8daca177f3e67095239.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://e.hiphotos.baidu.com/image/pic/item/eaf81a4c510fd9f94344d80d272dd42a2834a407.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://e.hiphotos.baidu.com/image/pic/item/faf2b2119313b07e66eedd6c0ed7912397dd8c07.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://e.hiphotos.baidu.com/image/pic/item/7af40ad162d9f2d33b4fa98babec8a136327cc7c.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://f.hiphotos.baidu.com/image/pic/item/7e3e6709c93d70cf3ed82769fadcd100baa12bb7.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://f.hiphotos.baidu.com/image/pic/item/08f790529822720e899c6f9e79cb0a46f21fab00.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://b.hiphotos.baidu.com/image/pic/item/10dfa9ec8a13632713ed4f57938fa0ec08fac756.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://g.hiphotos.baidu.com/image/pic/item/63d9f2d3572c11dfc7883247612762d0f703c27d.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://h.hiphotos.baidu.com/image/pic/item/5882b2b7d0a20cf486b273bb74094b36acaf99b0.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://f.hiphotos.baidu.com/image/pic/item/0ff41bd5ad6eddc44caa399f3bdbb6fd52663300.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://c.hiphotos.baidu.com/image/pic/item/d50735fae6cd7b89b421b7e70d2442a7d9330e00.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://e.hiphotos.baidu.com/image/pic/item/caef76094b36acaf92b91b987ed98d1001e99c7d.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://e.hiphotos.baidu.com/image/pic/item/8d5494eef01f3a29f1ea58aa9b25bc315c607cb0.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://a.hiphotos.baidu.com/image/pic/item/ca1349540923dd54be512a0cd309b3de9c8248b0.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://d.hiphotos.baidu.com/image/pic/item/b151f8198618367a89c4f2b92c738bd4b31ce501.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://g.hiphotos.baidu.com/image/pic/item/f11f3a292df5e0fe275a6bab5f6034a85fdf72de.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://a.hiphotos.baidu.com/image/pic/item/e1fe9925bc315c6084f1b7958fb1cb1349547760.jpg" /></li>
+		<li><img class="lazy" width="640" height="200" data-original="http://d.hiphotos.baidu.com/image/pic/item/574e9258d109b3de27db3812cebf6c81800a4c60.jpg" /></li>
+	</ul>
+</body>
+<script src="bower_components/jquery/dist/jquery.js" type="text/javascript"></script>
+<script src="bower_components/jquery.lazyload/jquery.lazyload.js" type="text/javascript"></script>
+<script>
+	$("img.lazy").lazyload({
+	    effect : "fadeIn",
+	    // threshold : 3000
+	});
+	</script>
+</html>
