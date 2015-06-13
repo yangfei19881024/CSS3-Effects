@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+
+      *{
+        margin:0px;
+        padding:0px;
+      }
+
+     .star{
+       width:38px;
+       height: 36px;
+       display: inline-block;
+       background: url(./img/star.png)  -38px 0 no-repeat;
+
+       transition: background 0.2s linear;
+       -webkit-transition: background 0.2s linear;
+     }
+
+     .star.active{
+       background: url(./img/star.png)  0 0 no-repeat;
+     }
+
+    </style>
+  </head>
+  <body>
+
+    <span class="star"></span>
+
+  </body>
+
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+  <script>
+    $(function(){
+
+      $("span").click(function(e){
+        $(this).addClass("active");
+        e.stopPropagation();
+      })
+
+      $(document).click(function(){
+        $("span").removeClass("active");
+      })
+
+    })
+  </script>
+</html>
